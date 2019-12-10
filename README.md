@@ -1,21 +1,52 @@
 # ntc-goredis
-ntc-goredis redis client golang  
+ntc-goredis is module redis golang client.  
 
-## Dependence
-
+## Install
+```bash
+go get -u github.com/congnghia0609/ntc-goredis
 ```
-go get github.com/garyburd/redigo/redis
+
+## Install dependencies
+```bash
+make deps
 ```
 
-## Run
-
+## Build
+```bash
+make build
 ```
+
+## Clean file build
+```bash
+make clean
+```
+
+## Run with environment: development | test | staging | production
+### development
+```bash
+make run
+```
+### test
+```bash
+make run-test
+```
+### staging
+```bash
+make run-stag
+```
+### production
+```bash
+make run-prod
+```
+
+## Run test file
+```bash
 cd ntc-goredis
 
 go run main.go
-
+```
 or
-
+```bash
 go install
 ntc-goredis
 ```

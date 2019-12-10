@@ -1,11 +1,17 @@
-package main
+/**
+ *
+ * @author nghiatc
+ * @since Feb 8, 2018
+ */
+
+package nredis
 
 import (
 	"encoding/json"
 	"fmt"
 )
 
-func sjson2map(s string) map[string]interface{} {
+func Json2Map(s string) map[string]interface{} {
 	// string json to map
 	if len(s) > 0 {
 		var mapData map[string]interface{}
@@ -16,7 +22,7 @@ func sjson2map(s string) map[string]interface{} {
 	return nil
 }
 
-func map2sjson(data map[string]interface{}) string {
+func Map2Json(data map[string]interface{}) string {
 	if data != nil {
 		out, _ := json.Marshal(data)
 		return string(out)
@@ -24,7 +30,7 @@ func map2sjson(data map[string]interface{}) string {
 	return ""
 }
 
-func exampleUJson() {
+func ExampleNJson() {
 	blockId := uint64(10)
 	blockHeader := "0x04a4fcf765d61e99fc2a9c785f4505f32de74c38ec2d0d120b5c278d5659e087"
 	seedHash := "0x0000000000000000000000000000000000000000000000000000000000000000"
@@ -36,9 +42,9 @@ func exampleUJson() {
 	mapData["blockHeader"] = blockHeader
 	mapData["seedHash"] = seedHash
 	mapData["difficulty"] = difficulty
-	sjson := map2sjson(mapData)
+	sjson := Map2Json(mapData)
 	fmt.Println("sjson=", sjson)
-	data := sjson2map(sjson)
+	data := Json2Map(sjson)
 	fmt.Println("type_xmpp:", data["type_xmpp"], ", type_msg:", data["type_msg"], ", blockId:", data["blockId"], ", blockHeader:", data["blockHeader"],
 		", difficulty:", data["difficulty"])
 }

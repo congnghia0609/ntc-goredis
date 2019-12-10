@@ -1,0 +1,6 @@
+ruser:
+  redis:
+    url: redis://127.0.0.1:6379
+    max_idle: 10
+    max_active: 20
+    timeout: 120  #Second
