@@ -6,18 +6,15 @@ ntc-goredis is module redis golang client.
 go get -u github.com/congnghia0609/ntc-goredis
 ```
 
-## Install dependencies
+## Build from source
 ```bash
+// Install dependencies
 make deps
-```
 
-## Build
-```bash
+// Build
 make build
-```
 
-## Clean file build
-```bash
+// Clean file build
 make clean
 ```
 
