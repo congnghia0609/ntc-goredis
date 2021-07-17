@@ -9,18 +9,19 @@ package main
 import (
 	"fmt"
 	"github.com/congnghia0609/ntc-gconf/nconf"
-	"ntc-goredis/nredis"
+	"github.com/congnghia0609/ntc-goredis/nredis"
 	"path/filepath"
 	"runtime"
 )
 
-func GetWDir() string {
-	_, b, _, _ := runtime.Caller(0)
-	return filepath.Dir(b)
-}
+//func GetWDir() string {
+//	_, b, _, _ := runtime.Caller(0)
+//	return filepath.Dir(b)
+//}
 
 func InitNConf() {
-	wdir := GetWDir()
+	_, b, _, _ := runtime.Caller(0)
+	wdir := filepath.Dir(b)
 	fmt.Println("wdir:", wdir)
 	nconf.Init(wdir)
 }

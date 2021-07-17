@@ -45,6 +45,6 @@ func ExampleNJson() {
 	sjson := Map2Json(mapData)
 	fmt.Println("sjson=", sjson)
 	data := Json2Map(sjson)
-	fmt.Println("type_xmpp:", data["type_xmpp"], ", type_msg:", data["type_msg"], ", blockId:", data["blockId"], ", blockHeader:", data["blockHeader"],
-		", difficulty:", data["difficulty"])
+	fmt.Println("type_xmpp:", data["type_xmpp"], ", type_msg:", data["type_msg"], ", blockId:", data["blockId"],
+		", blockHeader:", data["blockHeader"], ", difficulty:", data["difficulty"])
 }
