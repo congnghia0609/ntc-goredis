@@ -8,13 +8,18 @@ go get -u github.com/congnghia0609/ntc-goredis
 
 ## Build from source
 ```bash
-// Install dependencies
-make deps
+# Install dependencies
+#make deps
+go mod download
 
-// Build
+# update go.mod file
+go mod tidy
+
+# Build
+export GO111MODULE=on
 make build
 
-// Clean file build
+# Clean file build
 make clean
 ```
 
@@ -42,8 +47,7 @@ cd ntc-goredis
 
 go run main.go
 ```
-or
-```bash
-go install
-ntc-goredis
-```
+
+
+## License
+This code is under the [Apache License v2](https://www.apache.org/licenses/LICENSE-2.0).  
