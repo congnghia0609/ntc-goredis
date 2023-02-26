@@ -21,6 +21,10 @@ make build
 
 # Clean file build
 make clean
+
+# Run upgrade all library dependencies
+go get -u
+go mod tidy
 ```
 
 ## Run with environment: development | test | staging | production
